@@ -1,0 +1,103 @@
+{
+  "_id": "learn_from_failures",
+  "datasworn_version": "0.1.0",
+  "type":"expansion",
+  "ruleset": "starforged",
+  "title": "Learning From Your Failures in Starforged",
+  "authors": [{"name":"Shawn Tomkin"}],
+  "date": "2024-11-24",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://tomkinpress.com/blogs/news/learn-from-your-failures-in-starforged",
+  "rules": {
+    "special_tracks": {
+      "failure_track": {
+        "label": "Failure Track",
+        "description": "Learn from your mistakes.",
+        "optional": true,
+        "shared": false
+      }
+    }
+  },
+  "moves": {
+    "failure_moves": {
+      "name": "Failure Moves",
+      "type": "move_category",
+      "color": "#000000",
+      "_source": {
+        "title": "Learn From Your Failures in Starforged",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "url": "https://tomkinpress.com/blogs/news/learn-from-your-failures-in-starforged",
+        "date": "2024-11-24",
+        "authors": [{"name": "Shawn Tomkin"}]
+      },
+      "summary": "Moves to learn from your failures.",
+      "contents": {
+        "mark_your_failure": {
+          "name": "Mark Your Failure",
+          "roll_type": "no_roll",
+          "type": "move",
+          "trigger": {
+            "text": "When you make an action roll and score a miss...",
+            "conditions": []
+          },
+          "text": "__When you make an action roll and score a miss,__ mark a tick on your failure track. If you score a miss when making a progress roll, mark three ticks.",
+          "_source": {
+            "title": "Learn From Your Failures in Starforged",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "url": "https://tomkinpress.com/blogs/news/learn-from-your-failures-in-starforged",
+            "date": "2024-11-24",
+            "authors": [{"name": "Shawn Tomkin"}]
+          },
+          "outcomes": null,
+          "oracles": {},
+          "allow_momentum_burn": false,
+          "_id": "move:learn_from_failures/failure/mark_your_failure"
+        },
+        "learn_from_your_failures": {
+          "name": "Learn From Your Failures",
+          "roll_type": "special_track",
+          "type": "move",
+          "trigger": {
+            "text": "When you spend time reflecting on your hardships and missteps, and your failure track is +6 or greater...",
+            "conditions": [
+              {
+                "method": "player_choice",
+                "roll_options": [
+                  {
+                    "using": "failure_track"
+                  }
+                ]
+              }
+            ]
+          },
+          "text": "__When you spend time reflecting on your hardships and missteps,__ and your failure track is +6 or greater, roll your challenge dice and compare to your progress.\n\nOn a __strong hit,__ you commit to a dramatic change. Mark one box on your quests legacy track, clear all progress on the failure track, and choose one.\n\n  * Change course: Discard a single asset, take 2 experience for each marked ability, and [Advance](move:starforged/legacy/advance) to spend this experience on new assets or upgrades. Unused experience is discarded.\n  * Make it right: [Swear an Iron Vow](move:starforged/quest/swear_an_iron_vow) and reroll any dice.\n  * Ready your next steps: Take +3 momentum.\n\nOn a __weak hit,__ you learn from your mistakes. Mark two ticks on your quests legacy track and clear all progress on the failure track.\n\nOn a __miss,__ you’ve learned the wrong lessons. Mark 1 tick on your quests legacy track and clear all progress on the failure track. Then, envision how you set off on an ill-fated path.",
+          "outcomes": {
+            "strong_hit": {
+              "text": "On a __strong hit__, you commit to a dramatic change. Mark one box on your quests legacy track, clear all progress on the failure track, and choose one.\n\n  * Change course: Discard a single asset, take 2 experience for each marked ability, and [Advance](move:starforged/legacy/advance) to spend this experience on new assets or upgrades. Unused experience is discarded.\n  * Make it right: [Swear an Iron Vow](move:starforged/quest/swear_an_iron_vow) and reroll any dice.\n  * Ready your next steps: Take +3 momentum."
+            },
+            "weak_hit": {
+              "text": "On a __weak hit__, you learn from your mistakes. Mark two ticks on your quests legacy track and clear all progress on the failure track."
+            },
+            "miss": {
+              "text": "On a __miss__, you’ve learned the wrong lessons. Mark 1 tick on your quests legacy track and clear all progress on the failure track. Then, envision how you set off on an ill-fated path."
+            }
+          },
+          "_source": {
+            "title": "Learn From Your Failures in Starforged",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "url": "https://tomkinpress.com/blogs/news/learn-from-your-failures-in-starforged",
+            "date": "2024-11-24",
+            "authors": [{"name": "Shawn Tomkin"}]
+          },
+          "oracles": {},
+          "allow_momentum_burn": false,
+          "_id": "move:learn_from_failures/failure/learn_from_your_failures"
+        }
+      },
+      "collections": {},
+      "_id": "move_category:learn_from_failures/failure"
+    }
+  },
+  "oracles": {},
+  "assets": {}
+}
